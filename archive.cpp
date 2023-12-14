@@ -63,6 +63,11 @@ int main()
             name.PackSize[2]=buff[bytes+9];
             name.PackSize[3]=buff[bytes+10];
             int size_of_packaged_data=(int)(name.PackSize[0])+(int)(name.PackSize[1])+(int)(name.PackSize[2])+(int)(name.PackSize[3]);
+            for (int i=1; i<=name_len; i++)
+            {
+                cout << buff[i+bytes+31];
+            }
+            cout << "\n";
             bytes=bytes+razmer+size_of_packaged_data;
             k+=1;
         }
